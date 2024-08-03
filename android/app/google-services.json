@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "894945989078",
+    "firebase_url": "https://f-f-livestream-gemini-zqjt6m-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "f-f-livestream-gemini-zqjt6m",
+    "storage_bucket": "f-f-livestream-gemini-zqjt6m.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894945989078:android:3d5b86c245b83d5effd477",
+        "android_client_info": {
+          "package_name": "com.bosschatfflivestreamgemini"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv0cPZ_XI-9CusTAYA_yed15bRMggr6uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894945989078:android:4b7b8ed25c337463ffd477",
+        "android_client_info": {
+          "package_name": "com.flutterflow.fflivestreamgemini"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv0cPZ_XI-9CusTAYA_yed15bRMggr6uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
