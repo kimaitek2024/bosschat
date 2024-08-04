@@ -13,6 +13,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'personality_model.dart';
 export 'personality_model.dart';
 
@@ -429,41 +430,42 @@ class _PersonalityWidgetState extends State<PersonalityWidget>
                                                           return Material(
                                                             color: Colors
                                                                 .transparent,
-                                                            child:
-                                                                GestureDetector(
-                                                              onTap: () => _model
-                                                                      .unfocusNode
-                                                                      .canRequestFocus
-                                                                  ? FocusScope.of(
-                                                                          context)
-                                                                      .requestFocus(
-                                                                          _model
-                                                                              .unfocusNode)
-                                                                  : FocusScope.of(
-                                                                          context)
-                                                                      .unfocus(),
+                                                            child: WebViewAware(
                                                               child:
-                                                                  DropdownEditConversationWidget(
-                                                                renameAction:
-                                                                    () async {
-                                                                  await listViewConversationsRecord
-                                                                      .reference
-                                                                      .update(
-                                                                          createConversationsRecordData(
-                                                                    name: FFAppState()
-                                                                        .newName,
-                                                                  ));
-                                                                  FFAppState()
-                                                                      .newName = '';
-                                                                  setState(
-                                                                      () {});
-                                                                },
-                                                                deleteAction:
-                                                                    () async {
-                                                                  await listViewConversationsRecord
-                                                                      .reference
-                                                                      .delete();
-                                                                },
+                                                                  GestureDetector(
+                                                                onTap: () => _model
+                                                                        .unfocusNode
+                                                                        .canRequestFocus
+                                                                    ? FocusScope.of(
+                                                                            context)
+                                                                        .requestFocus(_model
+                                                                            .unfocusNode)
+                                                                    : FocusScope.of(
+                                                                            context)
+                                                                        .unfocus(),
+                                                                child:
+                                                                    DropdownEditConversationWidget(
+                                                                  renameAction:
+                                                                      () async {
+                                                                    await listViewConversationsRecord
+                                                                        .reference
+                                                                        .update(
+                                                                            createConversationsRecordData(
+                                                                      name: FFAppState()
+                                                                          .newName,
+                                                                    ));
+                                                                    FFAppState()
+                                                                        .newName = '';
+                                                                    setState(
+                                                                        () {});
+                                                                  },
+                                                                  deleteAction:
+                                                                      () async {
+                                                                    await listViewConversationsRecord
+                                                                        .reference
+                                                                        .delete();
+                                                                  },
+                                                                ),
                                                               ),
                                                             ),
                                                           );

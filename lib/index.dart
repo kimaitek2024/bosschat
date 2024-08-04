@@ -10,3 +10,5 @@ export '/auth_onboarding/auth_forgot_password/auth_forgot_password_widget.dart'
     show AuthForgotPasswordWidget;
 export '/auth_onboarding/personality/personality_widget.dart'
     show PersonalityWidget;
+export '/next_web/next_web_widget.dart' show NextWebWidget;
+export '/coder_a_i_l_l_m/coder_a_i_l_l_m_widget.dart' show CoderAILLMWidget;

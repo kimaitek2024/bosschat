@@ -113,6 +113,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Personality',
           path: '/personality',
           builder: (context, params) => const PersonalityWidget(),
+        ),
+        FFRoute(
+          name: 'NextWeb',
+          path: '/nextWeb',
+          builder: (context, params) => const NextWebWidget(),
+        ),
+        FFRoute(
+          name: 'CoderAILLM',
+          path: '/coderAILLM',
+          builder: (context, params) => const CoderAILLMWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

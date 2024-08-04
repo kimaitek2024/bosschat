@@ -165,13 +165,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tl': '',
     },
     '5n9onkka': {
-      'en': 'Create Recipe',
+      'en': 'Chat Hub',
       'ar': '',
       'ja': '',
       'tl': '',
     },
     'g80x2l4g': {
-      'en': 'Make me a delicious desert that resembles Cheesecake.',
+      'en':
+          'Try our chat hub and experience the\nlucidity and robust model responses.',
       'ar': '',
       'ja': '',
       'tl': '',
@@ -488,6 +489,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tl': '',
     },
     '062g2i2r': {
+      'en': 'Home',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+  },
+  // NextWeb
+  {
+    'u3qzjvzw': {
+      'en': 'Home',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+  },
+  // CoderAILLM
+  {
+    'yp5g2n4f': {
       'en': 'Home',
       'ar': '',
       'ja': '',

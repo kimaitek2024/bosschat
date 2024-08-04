@@ -13,6 +13,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'chat_main_model.dart';
 export 'chat_main_model.dart';
 
@@ -429,41 +430,42 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                           return Material(
                                                             color: Colors
                                                                 .transparent,
-                                                            child:
-                                                                GestureDetector(
-                                                              onTap: () => _model
-                                                                      .unfocusNode
-                                                                      .canRequestFocus
-                                                                  ? FocusScope.of(
-                                                                          context)
-                                                                      .requestFocus(
-                                                                          _model
-                                                                              .unfocusNode)
-                                                                  : FocusScope.of(
-                                                                          context)
-                                                                      .unfocus(),
+                                                            child: WebViewAware(
                                                               child:
-                                                                  DropdownEditConversationWidget(
-                                                                renameAction:
-                                                                    () async {
-                                                                  await listViewConversationsRecord
-                                                                      .reference
-                                                                      .update(
-                                                                          createConversationsRecordData(
-                                                                    name: FFAppState()
-                                                                        .newName,
-                                                                  ));
-                                                                  FFAppState()
-                                                                      .newName = '';
-                                                                  setState(
-                                                                      () {});
-                                                                },
-                                                                deleteAction:
-                                                                    () async {
-                                                                  await listViewConversationsRecord
-                                                                      .reference
-                                                                      .delete();
-                                                                },
+                                                                  GestureDetector(
+                                                                onTap: () => _model
+                                                                        .unfocusNode
+                                                                        .canRequestFocus
+                                                                    ? FocusScope.of(
+                                                                            context)
+                                                                        .requestFocus(_model
+                                                                            .unfocusNode)
+                                                                    : FocusScope.of(
+                                                                            context)
+                                                                        .unfocus(),
+                                                                child:
+                                                                    DropdownEditConversationWidget(
+                                                                  renameAction:
+                                                                      () async {
+                                                                    await listViewConversationsRecord
+                                                                        .reference
+                                                                        .update(
+                                                                            createConversationsRecordData(
+                                                                      name: FFAppState()
+                                                                          .newName,
+                                                                    ));
+                                                                    FFAppState()
+                                                                        .newName = '';
+                                                                    setState(
+                                                                        () {});
+                                                                  },
+                                                                  deleteAction:
+                                                                      () async {
+                                                                    await listViewConversationsRecord
+                                                                        .reference
+                                                                        .delete();
+                                                                  },
+                                                                ),
                                                               ),
                                                             ),
                                                           );
@@ -550,18 +552,22 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                 ),
                               ),
                             Expanded(
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'vsdzhdiv' /* Boss Chat */,
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    50.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'vsdzhdiv' /* Boss Chat */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'Figtree',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        letterSpacing: 0.0,
+                                      ),
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      fontFamily: 'Figtree',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      letterSpacing: 0.0,
-                                    ),
                               ),
                             ),
                             Row(
@@ -934,77 +940,95 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                   tablet: false,
                                                 ))
                                                   Expanded(
-                                                    child: Container(
-                                                      width: 170.0,
-                                                      height: 140.0,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
-                                                        border: Border.all(
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'NextWeb');
+                                                      },
+                                                      child: Container(
+                                                        width: 170.0,
+                                                        height: 140.0,
+                                                        decoration:
+                                                            BoxDecoration(
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .alternate,
+                                                              .secondaryBackground,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      12.0),
+                                                          border: Border.all(
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .alternate,
+                                                          ),
                                                         ),
-                                                      ),
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.all(
-                                                            12.0),
-                                                        child: Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                '5n9onkka' /* Create Recipe */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyLarge
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Instrument Sans',
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                  ),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              child: Text(
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets.all(
+                                                                  12.0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'g80x2l4g' /* Make me a delicious desert tha... */,
+                                                                  '5n9onkka' /* Chat Hub */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .labelSmall
+                                                                    .bodyLarge
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Figtree',
+                                                                          'Instrument Sans',
                                                                       letterSpacing:
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ),
-                                                          ],
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'g80x2l4g' /* Try our chat hub and experienc... */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmall
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Figtree',
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
