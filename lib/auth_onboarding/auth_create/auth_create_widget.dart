@@ -118,7 +118,9 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 32.0, 0.0, 8.0),
                               child: Text(
-                                'Welcome to our application!',
+                                FFLocalizations.of(context).getText(
+                                  'mteqgudr' /* Welcome to our application! */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .displayMedium
@@ -132,7 +134,9 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 12.0),
                               child: Text(
-                                'Save delicious recipes and get personalized content.',
+                                FFLocalizations.of(context).getText(
+                                  'oitqjkz1' /* Save delicious recipes and get... */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
@@ -152,7 +156,10 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
                                 textCapitalization: TextCapitalization.words,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Display Name',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'ut0mc379' /* Display Name */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -244,7 +251,10 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
                                 autofocus: false,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Email Address',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    '0tamvrrg' /* Email Address */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -337,7 +347,10 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
                                 textCapitalization: TextCapitalization.none,
                                 obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
-                                  labelText: 'Password',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'zfkn0gns' /* Password */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -461,7 +474,9 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
 
                           context.goNamedAuth('Chat_Main', context.mounted);
                         },
-                        text: 'Create Account',
+                        text: FFLocalizations.of(context).getText(
+                          '1fy9whma' /* Create Account */,
+                        ),
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 60.0,
@@ -470,6 +485,51 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget> {
                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primaryText,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleMedium.override(
+                                    fontFamily: 'Instrument Sans',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 4.0,
+                          borderSide: const BorderSide(
+                            color: Colors.transparent,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(50.0),
+                          hoverColor: FlutterFlowTheme.of(context).primaryText,
+                        ),
+                      ),
+                    ),
+                  if (!(isWeb
+                      ? MediaQuery.viewInsetsOf(context).bottom > 0
+                      : _isKeyboardVisible))
+                    Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 12.0, 16.0, 24.0),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          GoRouter.of(context).prepareAuthEvent();
+                          final user =
+                              await authManager.signInAnonymously(context);
+                          if (user == null) {
+                            return;
+                          }
+
+                          context.goNamedAuth('Chat_Main', context.mounted);
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          '490ywm2o' /* Skip */,
+                        ),
+                        options: FFButtonOptions(
+                          width: double.infinity,
+                          height: 60.0,
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleMedium.override(
                                     fontFamily: 'Instrument Sans',

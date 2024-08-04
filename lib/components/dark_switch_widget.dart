@@ -137,8 +137,8 @@ class _DarkSwitchWidgetState extends State<DarkSwitchWidget>
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20.0),
         child: Container(
-          width: 40.0,
-          height: 40.0,
+          width: 48.0,
+          height: 48.0,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).primaryBackground,
             borderRadius: BorderRadius.circular(20.0),
@@ -149,38 +149,42 @@ class _DarkSwitchWidgetState extends State<DarkSwitchWidget>
           ),
           child: Padding(
             padding: const EdgeInsets.all(2.0),
-            child: Stack(
-              alignment: const AlignmentDirectional(0.0, 0.0),
-              children: [
-                if (Theme.of(context).brightness == Brightness.dark)
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Icon(
-                        Icons.wb_sunny_rounded,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 24.0,
-                      ).animateOnActionTrigger(
-                          animationsMap['iconOnActionTriggerAnimation1']!,
-                          hasBeenTriggered: hasIconTriggered1),
+            child: SizedBox(
+              width: 48.0,
+              height: 48.0,
+              child: Stack(
+                alignment: const AlignmentDirectional(0.0, 0.0),
+                children: [
+                  if (Theme.of(context).brightness == Brightness.dark)
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Icon(
+                          Icons.wb_sunny_rounded,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 24.0,
+                        ).animateOnActionTrigger(
+                            animationsMap['iconOnActionTriggerAnimation1']!,
+                            hasBeenTriggered: hasIconTriggered1),
+                      ),
                     ),
-                  ),
-                if (Theme.of(context).brightness == Brightness.light)
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Icon(
-                        Icons.mode_night_rounded,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 24.0,
-                      ).animateOnActionTrigger(
-                          animationsMap['iconOnActionTriggerAnimation2']!,
-                          hasBeenTriggered: hasIconTriggered2),
+                  if (Theme.of(context).brightness == Brightness.light)
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Icon(
+                          Icons.mode_night_rounded,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 24.0,
+                        ).animateOnActionTrigger(
+                            animationsMap['iconOnActionTriggerAnimation2']!,
+                            hasBeenTriggered: hasIconTriggered2),
+                      ),
                     ),
-                  ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

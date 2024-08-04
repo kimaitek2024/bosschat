@@ -99,7 +99,9 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 32.0, 0.0, 8.0),
                               child: Text(
-                                'Get to my account',
+                                FFLocalizations.of(context).getText(
+                                  'njbgwvsf' /* Get to my account */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .displayMedium
@@ -113,7 +115,9 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 12.0),
                               child: Text(
-                                'Access your wonderful things by logging in below.',
+                                FFLocalizations.of(context).getText(
+                                  '1h3mowgr' /* Access your wonderful things b... */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
@@ -132,7 +136,10 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget> {
                                 autofocus: false,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Email Address',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'nsctkjln' /* Email Address */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -225,7 +232,10 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget> {
                                 textCapitalization: TextCapitalization.none,
                                 obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
-                                  labelText: 'Password',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'dhf3t1j0' /* Password */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -330,7 +340,9 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget> {
                                 onPressed: () async {
                                   context.pushNamed('auth_ForgotPassword');
                                 },
-                                text: 'Forgot Password?',
+                                text: FFLocalizations.of(context).getText(
+                                  'lyslioem' /* Forgot Password? */,
+                                ),
                                 options: FFButtonOptions(
                                   width: double.infinity,
                                   height: 60.0,
@@ -380,7 +392,9 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget> {
 
                         context.goNamedAuth('Chat_Main', context.mounted);
                       },
-                      text: 'Login',
+                      text: FFLocalizations.of(context).getText(
+                        'n8swczo6' /* Login */,
+                      ),
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 60.0,

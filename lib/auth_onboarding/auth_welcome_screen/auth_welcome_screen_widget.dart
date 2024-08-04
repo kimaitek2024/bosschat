@@ -448,7 +448,9 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            'Personalized recipe discovery',
+                                            FFLocalizations.of(context).getText(
+                                              'nyd8obzz' /* Welcome to Boss Chat */,
+                                            ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
@@ -464,7 +466,10 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'I have some great food options here!! Yum yum!!',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'eva1v1yn' /* Start to navigate the world of... */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -488,7 +493,9 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            'Awesome Recipes',
+                                            FFLocalizations.of(context).getText(
+                                              'v9yhg1di' /* Awesome Recipes */,
+                                            ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
@@ -504,7 +511,10 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'I have some great food options here!! Yum yum!!',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'dxplh4y4' /* I have some great food options... */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -528,7 +538,9 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            'Personalized recipe discovery',
+                                            FFLocalizations.of(context).getText(
+                                              'tb7p1k2w' /* Personalized recipe discovery */,
+                                            ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
@@ -544,7 +556,10 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'I have some great food options here!! Yum yum!!',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'hj6ivrd1' /* I have some great food options... */,
+                                              ),
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -609,7 +624,9 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                             onPressed: () async {
                               context.pushNamed('auth_Login');
                             },
-                            text: 'Login',
+                            text: FFLocalizations.of(context).getText(
+                              'zax74u8w' /* Login */,
+                            ),
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 60.0,
@@ -644,7 +661,9 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                             onPressed: () async {
                               context.pushNamed('auth_Create');
                             },
-                            text: 'Create an Account',
+                            text: FFLocalizations.of(context).getText(
+                              'hpchxatm' /* Create an Account */,
+                            ),
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 60.0,

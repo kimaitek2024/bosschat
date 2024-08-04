@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
 set(BINARY_NAME "Boss Chat")
-set(APPLICATION_ID "com.bosschatfflivestreamgemini")
+set(APPLICATION_ID "com.bosschat.aitek")
 
 cmake_policy(SET CMP0063 NEW)
 

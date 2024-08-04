@@ -254,7 +254,9 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 12.0, 0.0),
                                           child: Text(
-                                            'New Chat',
+                                            FFLocalizations.of(context).getText(
+                                              'q1wx5r9k' /* New Chat */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -290,7 +292,9 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Recents',
+                                  FFLocalizations.of(context).getText(
+                                    '9vkm06w9' /* Recents */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -534,7 +538,9 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                               ),
                             Expanded(
                               child: Text(
-                                'Boss Chat',
+                                FFLocalizations.of(context).getText(
+                                  'vsdzhdiv' /* Boss Chat */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
@@ -602,7 +608,9 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: Text(
-                                            'Hello.',
+                                            FFLocalizations.of(context).getText(
+                                              '9zg2gjnq' /* Hello. */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .displayLarge
                                                 .override(
@@ -619,7 +627,9 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            'How can I help you today?',
+                                            FFLocalizations.of(context).getText(
+                                              'sab0rwcn' /* How can I help you today? */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .displaySmall
                                                 .override(
@@ -712,7 +722,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Bracketology',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '50dhe8m3' /* Bracketology */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -732,7 +746,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'Tell me who will win March Madness',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'iqyaktdq' /* Tell me who will win March Mad... */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .labelSmall
@@ -787,7 +805,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Help me Learn UX',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'w5eu16md' /* Help me Learn UX */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -807,7 +829,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'Give me a breakdown of product design and the steps I need to take to be successful.',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'ld4hfu53' /* Give me a breakdown of product... */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .labelSmall
@@ -861,7 +887,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Create Recipe',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '5n9onkka' /* Create Recipe */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -881,7 +911,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'Make me a delicious desert that resembles Cheesecake.',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'g80x2l4g' /* Make me a delicious desert tha... */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .labelSmall
@@ -972,7 +1006,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Learn FlutterFlow',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'nq0l8550' /* Learn FlutterFlow */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -992,7 +1030,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'What are the best options for learning FlutterFlow and becoming an expert at the platform?',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'ft96lj2p' /* What are the best options for ... */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .labelSmall
@@ -1058,7 +1100,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Tell me a joke',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'et5y313b' /* Tell me a joke */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -1078,7 +1124,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'Tell me a joke about a barista.',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'aeceaaph' /* Tell me a joke about a barista... */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .labelSmall
@@ -1127,7 +1177,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Create Recipe',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'n03iww9k' /* Create Recipe */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -1147,7 +1201,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'Make me a delicious desert that resembles Cheesecake.',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'nd4eya9z' /* Make me a delicious desert tha... */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .labelSmall

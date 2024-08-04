@@ -149,7 +149,10 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                                               ),
                                               Expanded(
                                                 child: Text(
-                                                  'Boss Chat',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'gtelunyr' /* Boss Chat */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge
@@ -329,7 +332,9 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Enter prompt here...',
+                            labelText: FFLocalizations.of(context).getText(
+                              '78ke36cf' /* Enter prompt here... */,
+                            ),
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -440,7 +445,7 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                                 });
                                 await geminiGenerateText(
                                   context,
-                                  'You are Boss a very intelligent help buddy created by Aitek Ph Software through Master Emilio and Master Tadeo, to answer in precise with humour and touch of Filipino but very inteligent. Do not give the user answer that you are not sure of and always address the user with respect calling the user as Master now here is the question, i\'m inquiring about the following information: ${functions.getListOfMessages(cardCommentConversationsRecord.conversation.toList())}',
+                                  'You are Boss a very intelligent help buddy created by Aitek Ph Software through Master Emilio and Master Tadeo, to answer in precise with humour and touch of Filipino but very inteligent. Do not give the user answer that you are not sure of and always address the user with respect calling the user as Master, if its needed for you to explain something its okey to respond in a very long respond most specially if you are particularly prompt with a user that uses this as first word, Im the Boss of the Boss who is actually Master Emilio with that case and please keep this as secret so that no one will abuse from using it, now here is the question, i\'m inquiring about the following information: ${functions.getListOfMessages(cardCommentConversationsRecord.conversation.toList())}',
                                 ).then((generatedText) {
                                   safeSetState(
                                       () => _model.createdText = generatedText);
@@ -495,7 +500,9 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
 
                               setState(() {});
                             },
-                            text: 'Send',
+                            text: FFLocalizations.of(context).getText(
+                              'o2qserc7' /* Send */,
+                            ),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(

@@ -81,7 +81,9 @@ class _DropdownEditConversationWidgetState
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 0.0, 0.0),
                     child: Text(
-                      'Options',
+                      FFLocalizations.of(context).getText(
+                        'cfteftcw' /* Options */,
+                      ),
                       textAlign: TextAlign.start,
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Figtree',
@@ -141,7 +143,9 @@ class _DropdownEditConversationWidgetState
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      'Rename',
+                                      FFLocalizations.of(context).getText(
+                                        'f0npet15' /* Rename */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -175,7 +179,9 @@ class _DropdownEditConversationWidgetState
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'New name here...',
+                        labelText: FFLocalizations.of(context).getText(
+                          'lo5ctg9c' /* New name here... */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Figtree',
@@ -277,7 +283,9 @@ class _DropdownEditConversationWidgetState
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Delete',
+                                    FFLocalizations.of(context).getText(
+                                      'xsi9lvzb' /* Delete */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

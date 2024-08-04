@@ -157,7 +157,10 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                           ),
                                           Expanded(
                                             child: Text(
-                                              'Gemini Ai',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'o08m2dka' /* Gemini Ai */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
@@ -235,7 +238,7 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                                 builder: (context) => Text(
                                                   valueOrDefault<String>(
                                                     currentUserDisplayName,
-                                                    'A',
+                                                    'U',
                                                   ).maybeHandleOverflow(
                                                       maxChars: 1),
                                                   textAlign: TextAlign.center,
@@ -332,7 +335,9 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Enter prompt here...',
+                        labelText: FFLocalizations.of(context).getText(
+                          'biea710v' /* Enter prompt here... */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Figtree',
@@ -421,15 +426,15 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                           });
                           await geminiGenerateText(
                             context,
-                            _model.textController.text,
+                            _model.createdText22!,
                           ).then((generatedText) {
                             safeSetState(
-                                () => _model.createdText = generatedText);
+                                () => _model.createdText22 = generatedText);
                           });
 
                           // showResponse
                           _model.addToConversation(MessageStruct(
-                            text: _model.createdText,
+                            text: _model.createdText22,
                             userSent: false,
                             timeCreated: getCurrentTimestamp,
                             type: 'response',
@@ -450,7 +455,9 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
 
                           setState(() {});
                         },
-                        text: 'Send',
+                        text: FFLocalizations.of(context).getText(
+                          'z84c4s6n' /* Send */,
+                        ),
                         options: FFButtonOptions(
                           height: 36.0,
                           padding: const EdgeInsetsDirectional.fromSTEB(

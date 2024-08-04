@@ -8,12 +8,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:894945989078:android:3d5b86c245b83d5effd477",
+        "mobilesdk_app_id": "1:894945989078:android:41d470eec0243f0bffd477",
         "android_client_info": {
-          "package_name": "com.bosschatfflivestreamgemini"
+          "package_name": "com.bosschat.aitek"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "894945989078-vki1v6hng3e45joehon8iguqj4o685m2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bosschat.aitek",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "894945989078-f70k33h22dn8c9ki6pp6e3vcs9mun57i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAv0cPZ_XI-9CusTAYA_yed15bRMggr6uk"
@@ -21,7 +34,63 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894945989078-f70k33h22dn8c9ki6pp6e3vcs9mun57i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "894945989078-fn37hf77jqfgitb12gmd8pbu7o41ib7b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bosschatfflivestreamgemini"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894945989078:android:3d5b86c245b83d5effd477",
+        "android_client_info": {
+          "package_name": "com.bosschatfflivestreamgemini"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894945989078-qsdgfkl6kqa33sdk97rs1v1c73ajs7cc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bosschatfflivestreamgemini",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "894945989078-f70k33h22dn8c9ki6pp6e3vcs9mun57i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv0cPZ_XI-9CusTAYA_yed15bRMggr6uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894945989078-f70k33h22dn8c9ki6pp6e3vcs9mun57i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "894945989078-fn37hf77jqfgitb12gmd8pbu7o41ib7b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bosschatfflivestreamgemini"
+              }
+            }
+          ]
         }
       }
     },
@@ -32,7 +101,20 @@
           "package_name": "com.flutterflow.fflivestreamgemini"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "894945989078-mn8h25vq88hbno2n1us3qi5vodksf3d3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.fflivestreamgemini",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "894945989078-f70k33h22dn8c9ki6pp6e3vcs9mun57i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAv0cPZ_XI-9CusTAYA_yed15bRMggr6uk"
@@ -40,7 +122,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894945989078-f70k33h22dn8c9ki6pp6e3vcs9mun57i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "894945989078-fn37hf77jqfgitb12gmd8pbu7o41ib7b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bosschatfflivestreamgemini"
+              }
+            }
+          ]
         }
       }
     }

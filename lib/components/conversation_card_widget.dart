@@ -101,7 +101,7 @@ class _ConversationCardWidgetState extends State<ConversationCardWidget> {
                 FlutterFlowIconButton(
                   borderRadius: 20.0,
                   borderWidth: 1.0,
-                  buttonSize: 36.0,
+                  buttonSize: 48.0,
                   icon: Icon(
                     Icons.more_vert_outlined,
                     color: FlutterFlowTheme.of(context).secondaryText,

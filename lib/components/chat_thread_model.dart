@@ -25,7 +25,7 @@ class ChatThreadModel extends FlutterFlowModel<ChatThreadWidget> {
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
   // Stores action output result for [Gemini - Generate Text] action in Button widget.
-  String? createdText;
+  String? createdText22;
 
   @override
   void initState(BuildContext context) {

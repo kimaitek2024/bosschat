@@ -113,7 +113,9 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 32.0, 0.0, 8.0),
                               child: Text(
-                                'Forgot Password',
+                                FFLocalizations.of(context).getText(
+                                  'rmanw9ap' /* Forgot Password */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .displayMedium
@@ -127,7 +129,9 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 12.0),
                               child: Text(
-                                'We will send you a reset link.',
+                                FFLocalizations.of(context).getText(
+                                  '3yjlaky5' /* We will send you a reset link. */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
@@ -146,7 +150,10 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                                 autofocus: false,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Email Address',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'nsctkjln' /* Email Address */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
@@ -257,7 +264,9 @@ class _AuthForgotPasswordWidgetState extends State<AuthForgotPasswordWidget> {
                             context: context,
                           );
                         },
-                        text: 'Send Link',
+                        text: FFLocalizations.of(context).getText(
+                          'h76n3pxf' /* Send Link */,
+                        ),
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 60.0,
