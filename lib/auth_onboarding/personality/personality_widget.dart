@@ -838,120 +838,134 @@ class _PersonalityWidgetState extends State<PersonalityWidget>
                                                                   ),
                                                                 ),
                                                               ),
-                                                              if (FFAppState()
-                                                                      .play ==
-                                                                  false)
-                                                                Padding(
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          18.0,
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0),
+                                                              Container(
+                                                                decoration:
+                                                                    const BoxDecoration(),
+                                                                child:
+                                                                    Visibility(
+                                                                  visible:
+                                                                      FFAppState()
+                                                                              .play ==
+                                                                          false,
                                                                   child:
-                                                                      FlutterFlowIconButton(
-                                                                    borderColor:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .tertiary,
-                                                                    borderRadius:
-                                                                        24.0,
-                                                                    borderWidth:
-                                                                        1.0,
-                                                                    buttonSize:
-                                                                        34.0,
-                                                                    fillColor: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .tertiary,
-                                                                    icon: Icon(
-                                                                      Icons
-                                                                          .play_circle,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .info,
-                                                                      size:
-                                                                          16.0,
-                                                                    ),
-                                                                    showLoadingIndicator:
-                                                                        true,
-                                                                    onPressed:
-                                                                        () async {
-                                                                      _model.soundPlayer ??=
-                                                                          AudioPlayer();
-                                                                      if (_model
-                                                                          .soundPlayer!
-                                                                          .playing) {
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            18.0,
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        FlutterFlowIconButton(
+                                                                      borderColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .tertiary,
+                                                                      borderRadius:
+                                                                          24.0,
+                                                                      borderWidth:
+                                                                          1.0,
+                                                                      buttonSize:
+                                                                          34.0,
+                                                                      fillColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .tertiary,
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .play_circle,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .info,
+                                                                        size:
+                                                                            16.0,
+                                                                      ),
+                                                                      showLoadingIndicator:
+                                                                          true,
+                                                                      onPressed:
+                                                                          () async {
+                                                                        _model.soundPlayer ??=
+                                                                            AudioPlayer();
+                                                                        if (_model
+                                                                            .soundPlayer!
+                                                                            .playing) {
+                                                                          await _model
+                                                                              .soundPlayer!
+                                                                              .stop();
+                                                                        }
+                                                                        _model
+                                                                            .soundPlayer!
+                                                                            .setVolume(0.83);
                                                                         await _model
                                                                             .soundPlayer!
-                                                                            .stop();
-                                                                      }
-                                                                      _model
-                                                                          .soundPlayer!
-                                                                          .setVolume(
-                                                                              0.83);
-                                                                      await _model
-                                                                          .soundPlayer!
-                                                                          .setUrl(
-                                                                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/f-f-livestream-gemini-zqjt6m/assets/1ucirwyjwug8/boss.mp3')
-                                                                          .then((_) => _model
-                                                                              .soundPlayer!
-                                                                              .play());
+                                                                            .setUrl(
+                                                                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/f-f-livestream-gemini-zqjt6m/assets/1ucirwyjwug8/boss.mp3')
+                                                                            .then((_) =>
+                                                                                _model.soundPlayer!.play());
 
-                                                                      FFAppState()
-                                                                              .play =
-                                                                          true;
-                                                                      setState(
-                                                                          () {});
-                                                                    },
-                                                                  ),
-                                                                ),
-                                                              if (FFAppState()
-                                                                      .play ==
-                                                                  true)
-                                                                Padding(
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10.0,
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      FlutterFlowIconButton(
-                                                                    borderColor:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .tertiary,
-                                                                    borderRadius:
-                                                                        20.0,
-                                                                    borderWidth:
-                                                                        1.0,
-                                                                    buttonSize:
-                                                                        36.0,
-                                                                    fillColor: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .tertiary,
-                                                                    icon: Icon(
-                                                                      Icons
-                                                                          .stop_circle,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .info,
-                                                                      size:
-                                                                          16.0,
+                                                                        FFAppState().play =
+                                                                            true;
+                                                                        setState(
+                                                                            () {});
+                                                                      },
                                                                     ),
-                                                                    showLoadingIndicator:
-                                                                        true,
-                                                                    onPressed:
-                                                                        () async {
-                                                                      _model
-                                                                          .soundPlayer
-                                                                          ?.stop();
-                                                                      FFAppState()
-                                                                              .play =
-                                                                          false;
-                                                                      setState(
-                                                                          () {});
-                                                                    },
                                                                   ),
                                                                 ),
+                                                              ),
+                                                              Container(
+                                                                decoration:
+                                                                    const BoxDecoration(),
+                                                                child:
+                                                                    Visibility(
+                                                                  visible:
+                                                                      FFAppState()
+                                                                              .play ==
+                                                                          true,
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10.0,
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        FlutterFlowIconButton(
+                                                                      borderColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .tertiary,
+                                                                      borderRadius:
+                                                                          20.0,
+                                                                      borderWidth:
+                                                                          1.0,
+                                                                      buttonSize:
+                                                                          36.0,
+                                                                      fillColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .tertiary,
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .stop_circle,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .info,
+                                                                        size:
+                                                                            16.0,
+                                                                      ),
+                                                                      showLoadingIndicator:
+                                                                          true,
+                                                                      onPressed:
+                                                                          () async {
+                                                                        _model
+                                                                            .soundPlayer
+                                                                            ?.stop();
+                                                                        FFAppState().play =
+                                                                            false;
+                                                                        setState(
+                                                                            () {});
+                                                                      },
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
                                                             ],
                                                           ),
                                                         ],

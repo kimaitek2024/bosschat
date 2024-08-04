@@ -7,6 +7,7 @@ import '/flutter_flow/request_manager.dart';
 
 import 'chat_main_widget.dart' show ChatMainWidget;
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 class ChatMainModel extends FlutterFlowModel<ChatMainWidget> {
   ///  Local state fields for this page.
@@ -26,6 +27,7 @@ class ChatMainModel extends FlutterFlowModel<ChatMainWidget> {
   late FlutterFlowDynamicModels<ConversationCardModel> conversationCardModels;
   // Model for darkSwitch component.
   late DarkSwitchModel darkSwitchModel;
+  AudioPlayer? soundPlayer;
   // Model for thread_Chats component.
   late ThreadChatsModel threadChatsModel;
 
