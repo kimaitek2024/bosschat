@@ -298,162 +298,170 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 0.0),
-                                  child:
-                                      StreamBuilder<List<ConversationsRecord>>(
-                                    stream: _model.conversations(
-                                      overrideCache:
-                                          _model.hasActiveChat != null,
-                                      requestFn: () => queryConversationsRecord(
-                                        queryBuilder: (conversationsRecord) =>
-                                            conversationsRecord
-                                                .where(
-                                                  'userRef',
-                                                  isEqualTo: _model
-                                                      .newConversations
-                                                      ?.userRef,
-                                                )
-                                                .orderBy('timeEdited',
-                                                    descending: true),
-                                        limit: 8,
+                                Container(
+                                  decoration: const BoxDecoration(),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 8.0, 0.0, 0.0),
+                                    child: StreamBuilder<
+                                        List<ConversationsRecord>>(
+                                      stream: _model.conversations(
+                                        overrideCache:
+                                            _model.hasActiveChat != null,
+                                        requestFn: () =>
+                                            queryConversationsRecord(
+                                          queryBuilder: (conversationsRecord) =>
+                                              conversationsRecord
+                                                  .where(
+                                                    'userRef',
+                                                    isEqualTo: _model
+                                                        .newConversations
+                                                        ?.userRef,
+                                                  )
+                                                  .orderBy('timeEdited',
+                                                      descending: true),
+                                          limit: 8,
+                                        ),
                                       ),
-                                    ),
-                                    builder: (context, snapshot) {
-                                      // Customize what your widget looks like when it's loading.
-                                      if (!snapshot.hasData) {
-                                        return Center(
-                                          child: SizedBox(
-                                            width: 50.0,
-                                            height: 50.0,
-                                            child: CircularProgressIndicator(
-                                              valueColor:
-                                                  AlwaysStoppedAnimation<Color>(
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                              ),
-                                            ),
-                                          ),
-                                        );
-                                      }
-                                      List<ConversationsRecord>
-                                          listViewConversationsRecordList =
-                                          snapshot.data!;
-
-                                      return ListView.builder(
-                                        padding: EdgeInsets.zero,
-                                        primary: false,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        itemCount:
-                                            listViewConversationsRecordList
-                                                .length,
-                                        itemBuilder: (context, listViewIndex) {
-                                          final listViewConversationsRecord =
-                                              listViewConversationsRecordList[
-                                                  listViewIndex];
-                                          return Builder(
-                                            builder: (context) => InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                _model.activeChat =
-                                                    listViewConversationsRecord
-                                                        .reference;
-                                                _model.hasActiveChat = true;
-                                                setState(() {});
-                                              },
-                                              child: wrapWithModel(
-                                                model: _model
-                                                    .conversationCardModels
-                                                    .getModel(
-                                                  listViewConversationsRecord
-                                                      .reference.id,
-                                                  listViewIndex,
-                                                ),
-                                                updateCallback: () =>
-                                                    setState(() {}),
-                                                updateOnChange: true,
-                                                child: ConversationCardWidget(
-                                                  key: Key(
-                                                    'Keyo4i_${listViewConversationsRecord.reference.id}',
-                                                  ),
-                                                  convoName:
-                                                      listViewConversationsRecord
-                                                          .name,
-                                                  action: () async {
-                                                    await showAlignedDialog(
-                                                      context: context,
-                                                      isGlobal: false,
-                                                      avoidOverflow: true,
-                                                      targetAnchor:
-                                                          const AlignmentDirectional(
-                                                                  1.0, 0.0)
-                                                              .resolve(
-                                                                  Directionality.of(
-                                                                      context)),
-                                                      followerAnchor:
-                                                          const AlignmentDirectional(
-                                                                  -1.0, 0.0)
-                                                              .resolve(
-                                                                  Directionality.of(
-                                                                      context)),
-                                                      builder: (dialogContext) {
-                                                        return Material(
-                                                          color: Colors
-                                                              .transparent,
-                                                          child:
-                                                              GestureDetector(
-                                                            onTap: () => _model
-                                                                    .unfocusNode
-                                                                    .canRequestFocus
-                                                                ? FocusScope.of(
-                                                                        context)
-                                                                    .requestFocus(
-                                                                        _model
-                                                                            .unfocusNode)
-                                                                : FocusScope.of(
-                                                                        context)
-                                                                    .unfocus(),
-                                                            child:
-                                                                DropdownEditConversationWidget(
-                                                              renameAction:
-                                                                  () async {
-                                                                await listViewConversationsRecord
-                                                                    .reference
-                                                                    .update(
-                                                                        createConversationsRecordData(
-                                                                  name: FFAppState()
-                                                                      .newName,
-                                                                ));
-                                                                FFAppState()
-                                                                    .newName = '';
-                                                                setState(() {});
-                                                              },
-                                                              deleteAction:
-                                                                  () async {
-                                                                await listViewConversationsRecord
-                                                                    .reference
-                                                                    .delete();
-                                                              },
-                                                            ),
-                                                          ),
-                                                        );
-                                                      },
-                                                    ).then((value) =>
-                                                        setState(() {}));
-                                                  },
+                                      builder: (context, snapshot) {
+                                        // Customize what your widget looks like when it's loading.
+                                        if (!snapshot.hasData) {
+                                          return Center(
+                                            child: SizedBox(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
                                                 ),
                                               ),
                                             ),
                                           );
-                                        },
-                                      );
-                                    },
+                                        }
+                                        List<ConversationsRecord>
+                                            listViewConversationsRecordList =
+                                            snapshot.data!;
+
+                                        return ListView.builder(
+                                          padding: EdgeInsets.zero,
+                                          primary: false,
+                                          shrinkWrap: true,
+                                          scrollDirection: Axis.vertical,
+                                          itemCount:
+                                              listViewConversationsRecordList
+                                                  .length,
+                                          itemBuilder:
+                                              (context, listViewIndex) {
+                                            final listViewConversationsRecord =
+                                                listViewConversationsRecordList[
+                                                    listViewIndex];
+                                            return Builder(
+                                              builder: (context) => InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  _model.activeChat =
+                                                      listViewConversationsRecord
+                                                          .reference;
+                                                  _model.hasActiveChat = true;
+                                                  setState(() {});
+                                                },
+                                                child: wrapWithModel(
+                                                  model: _model
+                                                      .conversationCardModels
+                                                      .getModel(
+                                                    listViewConversationsRecord
+                                                        .reference.id,
+                                                    listViewIndex,
+                                                  ),
+                                                  updateCallback: () =>
+                                                      setState(() {}),
+                                                  updateOnChange: true,
+                                                  child: ConversationCardWidget(
+                                                    key: Key(
+                                                      'Keyo4i_${listViewConversationsRecord.reference.id}',
+                                                    ),
+                                                    convoName:
+                                                        listViewConversationsRecord
+                                                            .name,
+                                                    action: () async {
+                                                      await showAlignedDialog(
+                                                        context: context,
+                                                        isGlobal: false,
+                                                        avoidOverflow: true,
+                                                        targetAnchor:
+                                                            const AlignmentDirectional(
+                                                                    1.0, 0.0)
+                                                                .resolve(
+                                                                    Directionality.of(
+                                                                        context)),
+                                                        followerAnchor:
+                                                            const AlignmentDirectional(
+                                                                    -1.0, 0.0)
+                                                                .resolve(
+                                                                    Directionality.of(
+                                                                        context)),
+                                                        builder:
+                                                            (dialogContext) {
+                                                          return Material(
+                                                            color: Colors
+                                                                .transparent,
+                                                            child:
+                                                                GestureDetector(
+                                                              onTap: () => _model
+                                                                      .unfocusNode
+                                                                      .canRequestFocus
+                                                                  ? FocusScope.of(
+                                                                          context)
+                                                                      .requestFocus(
+                                                                          _model
+                                                                              .unfocusNode)
+                                                                  : FocusScope.of(
+                                                                          context)
+                                                                      .unfocus(),
+                                                              child:
+                                                                  DropdownEditConversationWidget(
+                                                                renameAction:
+                                                                    () async {
+                                                                  await listViewConversationsRecord
+                                                                      .reference
+                                                                      .update(
+                                                                          createConversationsRecordData(
+                                                                    name: FFAppState()
+                                                                        .newName,
+                                                                  ));
+                                                                  FFAppState()
+                                                                      .newName = '';
+                                                                  setState(
+                                                                      () {});
+                                                                },
+                                                                deleteAction:
+                                                                    () async {
+                                                                  await listViewConversationsRecord
+                                                                      .reference
+                                                                      .delete();
+                                                                },
+                                                              ),
+                                                            ),
+                                                          );
+                                                        },
+                                                      ).then((value) =>
+                                                          setState(() {}));
+                                                    },
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        );
+                                      },
+                                    ),
                                   ),
                                 ),
                               ].divide(const SizedBox(height: 8.0)),
@@ -526,11 +534,13 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                               ),
                             Expanded(
                               child: Text(
-                                'Gemini Clone',
+                                'Boss Chat',
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Figtree',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -552,8 +562,11 @@ class _ChatMainWidgetState extends State<ChatMainWidget>
                                 padding: const EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.network(
-                                    'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyM3x8dXNlcnxlbnwwfHx8fDE3MTA5NjA5MDl8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                  child: Image.asset(
+                                    Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? 'assets/images/Screenshot_from_2024-08-04_07-42-44-removebg-preview_(1).png'
+                                        : 'assets/images/Screenshot_from_2024-08-04_07-42-44-removebg-preview_(1).png',
                                     width: 300.0,
                                     height: 200.0,
                                     fit: BoxFit.cover,

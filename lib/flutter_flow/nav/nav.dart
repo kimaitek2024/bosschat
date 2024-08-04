@@ -8,6 +8,7 @@ import '/backend/schema/structs/index.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -296,12 +297,12 @@ class FFRoute {
               ? isWeb
                   ? Container()
                   : Container(
-                      color: Colors.transparent,
+                      color: FlutterFlowTheme.of(context).primaryBackground,
                       child: Center(
                         child: Image.asset(
-                          'assets/images/app_launcher_icon.jpg',
-                          width: 300.0,
-                          height: 300.0,
+                          'assets/images/Untitled_design.gif',
+                          width: double.infinity,
+                          height: double.infinity,
                           fit: BoxFit.cover,
                         ),
                       ),

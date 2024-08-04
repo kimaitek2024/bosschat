@@ -171,8 +171,13 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                             ),
                                           ),
                                           Text(
-                                            dateTimeFormat('relative',
-                                                messagesItem.timeCreated!),
+                                            dateTimeFormat(
+                                              'relative',
+                                              messagesItem.timeCreated!,
+                                              locale:
+                                                  FFLocalizations.of(context)
+                                                      .languageCode,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall
                                                 .override(
@@ -263,8 +268,13 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                             ),
                                           ),
                                           Text(
-                                            dateTimeFormat('relative',
-                                                messagesItem.timeCreated!),
+                                            dateTimeFormat(
+                                              'relative',
+                                              messagesItem.timeCreated!,
+                                              locale:
+                                                  FFLocalizations.of(context)
+                                                      .languageCode,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall
                                                 .override(

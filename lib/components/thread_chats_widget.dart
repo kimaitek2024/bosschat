@@ -138,24 +138,18 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .accent1,
-                                                  shape: BoxShape.circle,
-                                                ),
-                                                child: Align(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Icon(
-                                                    Icons.auto_awesome_outlined,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primary,
-                                                    size: 20.0,
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                    image: Image.asset(
+                                                      'assets/images/Screenshot_from_2024-08-04_07-42-44-removebg-preview_(1).png',
+                                                    ).image,
                                                   ),
+                                                  shape: BoxShape.circle,
                                                 ),
                                               ),
                                               Expanded(
                                                 child: Text(
-                                                  'Gemini Ai',
+                                                  'Boss Chat',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge
@@ -170,9 +164,12 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                                               ),
                                               Text(
                                                 dateTimeFormat(
-                                                    'relative',
-                                                    chatMessagesItem
-                                                        .timeCreated!),
+                                                  'relative',
+                                                  chatMessagesItem.timeCreated!,
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -268,9 +265,12 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                                               ),
                                               Text(
                                                 dateTimeFormat(
-                                                    'relative',
-                                                    chatMessagesItem
-                                                        .timeCreated!),
+                                                  'relative',
+                                                  chatMessagesItem.timeCreated!,
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -440,7 +440,7 @@ class _ThreadChatsWidgetState extends State<ThreadChatsWidget> {
                                 });
                                 await geminiGenerateText(
                                   context,
-                                  'Please answer in 100 words or less, i\'m inquiring about the following information: ${functions.getListOfMessages(cardCommentConversationsRecord.conversation.toList())}',
+                                  'You are Boss a very intelligent help buddy created by Aitek Ph Software through Master Emilio and Master Tadeo, to answer in precise with humour and touch of Filipino but very inteligent. Do not give the user answer that you are not sure of and always address the user with respect calling the user as Master now here is the question, i\'m inquiring about the following information: ${functions.getListOfMessages(cardCommentConversationsRecord.conversation.toList())}',
                                 ).then((generatedText) {
                                   safeSetState(
                                       () => _model.createdText = generatedText);
