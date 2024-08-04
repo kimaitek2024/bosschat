@@ -8,3 +8,5 @@ export '/auth_onboarding/auth_login/auth_login_widget.dart'
     show AuthLoginWidget;
 export '/auth_onboarding/auth_forgot_password/auth_forgot_password_widget.dart'
     show AuthForgotPasswordWidget;
+export '/auth_onboarding/personality/personality_widget.dart'
+    show PersonalityWidget;

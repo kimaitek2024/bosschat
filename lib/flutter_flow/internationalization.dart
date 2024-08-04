@@ -140,13 +140,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tl': '',
     },
     '50dhe8m3': {
-      'en': 'Bracketology',
+      'en': 'Personality',
       'ar': '',
       'ja': '',
       'tl': '',
     },
     'iqyaktdq': {
-      'en': 'Tell me who will win March Madness',
+      'en': 'Create your own personality',
       'ar': '',
       'ja': '',
       'tl': '',
@@ -177,7 +177,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tl': '',
     },
     'nq0l8550': {
-      'en': 'Learn FlutterFlow',
+      'en': 'Learn from Master Dee',
       'ar': '',
       'ja': '',
       'tl': '',
@@ -400,6 +400,94 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tl': '',
     },
     'e5gbt0kr': {
+      'en': 'Home',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+  },
+  // Personality
+  {
+    '5uyo01k3': {
+      'en': 'New Chat',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    '5r4bi90v': {
+      'en': 'Recents',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'b0101kcs': {
+      'en': 'Boss Aicon',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'qjarzq0r': {
+      'en': 'Personalities',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    '3qqp6ncd': {
+      'en': 'Create your own today?',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'stw60921': {
+      'en': 'Create Recipe',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'x09najr2': {
+      'en': 'Make me a delicious desert that resembles Cheesecake.',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    '1wgdibk9': {
+      'en': 'Learn from Master Dee',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'v3oguuy7': {
+      'en':
+          'What are the best options for learning FlutterFlow and becoming an expert at the platform?',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'qesn884o': {
+      'en': 'Tell me a joke',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'scgccnc8': {
+      'en': 'Tell me a joke about a barista.',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'qywz88wn': {
+      'en': 'Create Recipe',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    'r7vmrk94': {
+      'en': 'Make me a delicious desert that resembles Cheesecake.',
+      'ar': '',
+      'ja': '',
+      'tl': '',
+    },
+    '062g2i2r': {
       'en': 'Home',
       'ar': '',
       'ja': '',

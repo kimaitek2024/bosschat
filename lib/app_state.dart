@@ -55,6 +55,12 @@ class FFAppState extends ChangeNotifier {
   set newName(String value) {
     _newName = value;
   }
+
+  bool _play = false;
+  bool get play => _play;
+  set play(bool value) {
+    _play = value;
+  }
 }
 
 void _safeInit(Function() initializeField) {
